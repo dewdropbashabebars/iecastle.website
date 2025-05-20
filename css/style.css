@@ -200,7 +200,7 @@ header .container .social i:hover {
 /*! start hero section  */
 
 .hero {
-    background-image: url('../images/images/background.webp');
+    background-image: url('white_background-2.webp');
     /* height: 100vh; */
     /* vh:: view height, the screen you see at your computer between the header and footer og screen */
     /*  i wont to see the true size of screen without scroll:the hero i give it 100vh but there is header its height 80 px so we must make calc as down */
