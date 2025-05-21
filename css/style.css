@@ -11,7 +11,7 @@
     --transition: 0.5s ease;
     --border-redu: 10px;
     --shadow: -1px -2px 4px 1px rgba(117, 117, 119, 0.466)inset;
-    --transform: translatey(-5px) scale(1.02);
+    --transform: translatey(-7px) scale(1.03);
     --padd: 70px 0;
 }
 
@@ -200,11 +200,11 @@ header .container .social i:hover {
 /*! start hero section  */
 
 .hero {
-    background-image: url('white_background-2.webp');
+    background-image: url(../images/background/white_background-2.webp);
     /* height: 100vh; */
     /* vh:: view height, the screen you see at your computer between the header and footer og screen */
     /*  i wont to see the true size of screen without scroll:the hero i give it 100vh but there is header its height 80 px so we must make calc as down */
-    height: calc(100vh - 80px);
+    height: calc(100vh -80px);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -217,21 +217,12 @@ header .container .social i:hover {
 }
 
 .hero .container .hero-img {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
     margin-top: 30px;
-    box-shadow: var(--shadow);
-    background: var(--main-color);
 }
 
 .hero .container .hero-img img {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    transform: translateX(-15px);
+    width: 500px;
     transition: var(--transition);
-    box-shadow: var(--shadow);
     animation: fade-right 0.5s linear 0.1s 1 alternate;
 }
 
@@ -243,7 +234,6 @@ header .container .social i:hover {
     font-size: 40px;
     font-family: 'Almarai';
     font-weight: 800;
-    margin-top: 100px;
 }
 
 .hero .container .hero-info {
@@ -286,7 +276,7 @@ header .container .social i:hover {
 
 .hero .container .social i:hover {
     color: var(--main-color);
-    transform: translatey(-5px) scale(1.02);
+    transform: var(--transform);
     background: #abbaab;
     background: -webkit-linear-gradient(to top, #ffffff, #abbaab);
     background: linear-gradient(to top, #ffffff, #abbaab);
@@ -343,8 +333,8 @@ header .container .social i:hover {
     color: var(--main-color);
     margin-bottom: 25px;
     animation: zoom-out 1s linear 0.1s 1 forwards;
-    /* animation-fill-mode: both; */
     animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .section-desc {
@@ -494,14 +484,18 @@ header .container .social i:hover {
     margin: 10px;
     background-color: #ffffff;
     border: none;
-    border-radius: var(--border-redu);
     border-bottom: #595c59 1px solid;
-    box-shadow: var(--shadow);
     padding: 10px 30px;
+    border-radius: var(--border-redu);
+    box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+
+.about-us .about-call:hover a {
+    color: #ffff;
 }
 
 
@@ -551,7 +545,7 @@ header .container .social i:hover {
 
 .statistcs {
     padding: var(--padd);
-    background-image: url(../images/images/st-bg.jpg);
+    background-image: url(../images/background/st-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -565,7 +559,7 @@ header .container .social i:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.537);
+    background-color: rgba(114, 113, 113, 0.537);
 }
 
 .statistcs .container {
@@ -580,7 +574,6 @@ header .container .social i:hover {
     padding: 20px 0;
     transition: var(--transition);
     border-radius: var(--border-redu);
-    transition: var(--transition);
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
@@ -619,6 +612,10 @@ header .container .social i:hover {
     transition: var(--transition);
 }
 
+.statistcs .container .stat:hover {
+    background-color: #f3efefb7;
+}
+
 .statistcs .container .stat:hover::before {
     width: 100%;
 }
@@ -627,14 +624,14 @@ header .container .social i:hover {
     width: 100%;
 }
 
-.statistcs .container .stat:hover {
-    background-color: #f3efefb7;
-    transform: var(--transform);
-}
-
 .statistcs .container .stat img {
     width: 70px;
     border-radius: var(--border-redu);
+    transition: var(--transition);
+}
+
+.statistcs .container .stat:hover img {
+    transform: var(--transform);
 }
 
 .statistcs .container .stat h3 {
@@ -656,7 +653,6 @@ header .container .social i:hover {
 
 .courses {
     padding: var(--padd);
-    /* background-color: #e6dedec9; */
     background: #ece9e6;
     background: -webkit-linear-gradient( to bottom, #ffffff, #ece9e6);
     background: linear-gradient( to bottom, #ffffff, #ece9e6);
@@ -680,6 +676,7 @@ header .container .social i:hover {
     overflow: hidden;
     z-index: 1;
     animation: turn-down 1s linear 0.1s 1 alternate;
+    animation-fill-mode: forwards;
 }
 
 .catogary {
@@ -704,8 +701,7 @@ header .container .social i:hover {
 }
 
 .courses .all-courses .course .course-title {
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin: 7px 0;
     color: var(--main-color);
     font-size: 18px;
 }
@@ -719,11 +715,11 @@ header .container .social i:hover {
 
 .course-price {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .course-price div :last-child {
@@ -827,7 +823,7 @@ hr {
 }
 
 .courses .all-courses .course:hover {
-    transform: translateY(-15px)scale(1.01);
+    transform: var(--transform);
     background-color: #ffffff;
 }
 
@@ -877,6 +873,8 @@ hr {
     cursor: pointer;
     border-radius: var(--border-redu);
     overflow: hidden;
+    animation: turn-up 1s linear 0.1s 1 alternate;
+    animation-fill-mode: forwards;
 }
 
 .portfolio .port-container .box img {
@@ -962,28 +960,58 @@ hr {
     box-shadow: var(--shadow);
     transition: var(--transition);
     cursor: pointer;
+    animation: zoom-out 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    position: relative;
 }
 
-.team-box:hover {
-    transform: var(--transform);
+.team-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+
+.team-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+
+.team-box:hover::before {
+    width: 100%;
+}
+
+.team-box:hover::after {
+    height: 100%;
 }
 
 .team-box .img-social {
     display: flex;
     justify-content: space-between;
-    margin-right: 5px;
+    flex-direction: column;
+    margin: 10px 12px;
 }
 
 .team-box .img-social .social {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     padding-top: 10px;
 }
 
 .team-box .img-social .social i {
-    margin: 5px;
+    margin: 2px;
     padding-left: 4px;
     font-size: 18px;
     color: var(--a-color);
@@ -1000,14 +1028,18 @@ hr {
 }
 
 .team-box .img-social img {
-    width: 80%;
-    border-radius: 10px 2px 10px 5px;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 50%;
     /* if we wont all img by white and black at the basic and when i make hover back to color we add to img filter 100% and the hover is 0  */
-    filter: grayscale(0);
+    filter: grayscale(-50%);
     /* filter: saturate(50%); */
     /* filter: contrast(35%); */
     /* filter: brightness(60%); */
     /* filter: drop-shadow(80%); */
+    transition: var(--transition);
 }
 
 .team-box:hover img {
@@ -1019,6 +1051,8 @@ hr {
     /* filter: drop-shadow(80%); */
     filter: grayscale(50%);
     /* 0 is repaet the img to nomal color */
+    /* border: 2px solid rgb(187, 185, 185); */
+    transform: var(--transform);
 }
 
 .team-box .team-info {
@@ -1030,7 +1064,7 @@ hr {
 
 .team-box .team-info h3 {
     font-size: 16px;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
 }
 
 .team-box .team-info p {
@@ -1069,6 +1103,9 @@ hr {
 .skills-info,
 .skills-img {
     width: 45%;
+    animation: zoom-in 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .skills-img img {
@@ -1088,6 +1125,9 @@ hr {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    animation: zoom-out 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .progress .prog {
@@ -1179,10 +1219,13 @@ hr {
     position: relative;
     z-index: 999;
     transition: var(--transition);
+    animation: flip-x 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .plan::before {
-    content: "عرض خاص";
+    content: "";
     position: absolute;
     width: 60%;
     height: 35px;
@@ -1271,7 +1314,7 @@ hr {
 .plan ul li {
     padding: 12px;
     border: none;
-    box-shadow: var(--shadow);
+    /* box-shadow: var(--shadow); */
     transition: var(--transition);
     position: relative;
 }
@@ -1282,6 +1325,7 @@ hr {
     box-shadow: var(--shadow);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border: none;
 }
 
 .plan ul li::before {
@@ -1302,14 +1346,14 @@ hr {
 .plan .btn-plan {
     margin-top: 20px;
     background-color: #fff;
-    color: #686666;
+    color: #1d1c1c;
     width: 70%;
     border: none;
     border-radius: var(--border-redu);
     padding: 10px;
     transition: var(--transition);
     cursor: pointer;
-    box-shadow: -1px 1px 6px 1px rgba(117, 117, 119, 0.466);
+    box-shadow: var(--shadow);
 }
 
 .plan:hover {
@@ -1350,6 +1394,9 @@ hr {
     box-shadow: var(--shadow);
     transition: var(--transition);
     overflow: hidden;
+    animation: flip-x 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 .testimonial::before {
@@ -1383,12 +1430,12 @@ hr {
 }
 
 .testimonial img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: absolute;
-    left: 146px;
-    top: 5px;
+    left: 130px;
+    top: 10px;
     border: 6px solid #fff;
     transition: var(--transition);
     z-index: 3;
@@ -1396,7 +1443,7 @@ hr {
 }
 
 .testimonial h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
     margin-bottom: 20px;
 }
@@ -1405,6 +1452,7 @@ hr {
     position: absolute;
     left: 15px;
     top: 40px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--main-color);
     margin-bottom: 10px;
@@ -1413,7 +1461,7 @@ hr {
 .testimonial .stars {
     color: rgb(243, 180, 8);
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .testimonial .review {
@@ -1452,6 +1500,9 @@ footer .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
+    animation: fade-down 1s linear 0.1s 1 forwards;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 footer .container .section h2 {
@@ -1553,7 +1604,7 @@ footer .container .section a:hover {
 .hr-footer {
     width: 70%;
     height: 2px;
-    background-color: #626462;
+    background-color: #505250;
     margin-top: 35px;
     transform: translateX(-15%);
     /* becuase the width 70%/from left-15+ from right -15=30% */
