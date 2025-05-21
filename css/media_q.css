@@ -7,6 +7,7 @@
     header .container nav ul {
         display: none;
         width: 100%;
+        background-color: #eee;
     }
     header .container .social {
         display: none;
@@ -82,7 +83,7 @@
         margin-bottom: 20px;
     }
     footer .container {
-        padding-right: 60px;
+        padding-right: 20px;
     }
     footer .container .section {
         padding-right: 20px;
